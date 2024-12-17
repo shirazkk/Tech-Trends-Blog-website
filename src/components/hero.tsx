@@ -20,6 +20,7 @@ const Hero = () => {
             problem-solving systems, agentic AI is reshaping our future in ways
             we never imagined.
           </p>
+          
           <Button className="px-8 py-5 cursor-pointer bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition duration-300 shadow-lg">
             Read More
           </Button>

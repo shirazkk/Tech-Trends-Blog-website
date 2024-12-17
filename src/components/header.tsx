@@ -7,9 +7,9 @@ import Image from "next/image";
 
 const navigationLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-  { href: "/blogs", label: "Blog" },
+  { href: "/About", label: "About" },
+  { href: "/Contactus", label: "Contact" },
+  { href: "/Blog", label: "Blog" },
 ];
 
 const Header = () => {

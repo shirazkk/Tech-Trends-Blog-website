@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
-const TopBlogs = () => {
+const RecentBlogs = () => {
   const blogs = [
     {
       id: 1,
@@ -48,9 +49,11 @@ const TopBlogs = () => {
       {/* Header */}
       <div className="flex justify-between items-center mb-8 ">
         <h2 className="text-3xl font-bold">Our Recent Posts</h2>
-        <Button className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-400">
-          View All
-        </Button>
+        <Link href="/Blog">
+          <Button className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-400">
+            View All
+          </Button>
+        </Link>
       </div>
 
       {/* Featured Blog */}
@@ -78,9 +81,11 @@ const TopBlogs = () => {
           <p className="text-gray-600 dark:text-gray-300 mb-6">
             {blogs[0].description}
           </p>
-          <Button className="px-4 py-2 border bg-transparent border-blue-600 text-blue-600 rounded hover:bg-blue-50">
-            Read More
-          </Button>
+          <Link href={`/Blog/${blogs[0].id}`}>
+            <Button className="mt-4 px-4 py-2 border bg-transparent border-blue-600 text-blue-600 rounded hover:bg-blue-50">
+              Read More
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -107,9 +112,11 @@ const TopBlogs = () => {
               <p className="text-sm dark:text-gray-300 text-gray-500">
                 {blog.description}
               </p>
-              <Button className="mt-4 px-4 py-2 border bg-transparent border-blue-600 text-blue-600 rounded hover:bg-blue-50">
-                Read More
-              </Button>
+              <Link href={`/Blog/${blog.id}`}>
+                <Button className="mt-4 px-4 py-2 border bg-transparent border-blue-600 text-blue-600 rounded hover:bg-blue-50">
+                  Read More
+                </Button>
+              </Link>
             </div>
           </div>
         ))}
@@ -118,4 +125,4 @@ const TopBlogs = () => {
   );
 };
 
-export default TopBlogs;
+export default RecentBlogs;

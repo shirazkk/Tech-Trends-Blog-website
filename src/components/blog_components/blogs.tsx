@@ -1,16 +1,16 @@
 import Image from "next/image";
 import React from "react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import Link from "next/link";
 
-const PopularPost = () => {
+const Blogs = () => {
   const blogs = [
     {
       id: 5,
       image: "/cybersecurity.jpg",
       category: "Cybersecurity",
       date: "May 15, 2024",
-      title: " AI-Powered Cybersecurity: Defending the Digital Era",
+      title: "AI-Powered Cybersecurity: Defending the Digital Era",
       description:
         "How artificial intelligence is transforming cybersecurity and protecting against modern threats.",
     },
@@ -59,21 +59,38 @@ const PopularPost = () => {
       description:
         "A curated list of AI-powered tools that can help improve efficiency and productivity.",
     },
+
+    {
+      id: 11,
+      image: "/blockchain.jpeg",
+      category: "Blockchain",
+      date: "May 20, 2024",
+      title: "Understanding Blockchain and Its Impact on Industries",
+      description:
+        "A comprehensive overview of blockchain technology and its applications in various sectors.",
+    },
+    {
+      id: 12,
+      image: "/dataprivicy.jpeg",
+      category: "Data Privacy",
+      date: "May 18, 2024",
+      title: "The Importance of Data Privacy in the Digital Age",
+      description:
+        "Why data privacy is crucial in the digital age and how to protect your personal information online.",
+    },
+    {
+      id: 13,
+      image: "/digitalmark.jpeg",
+      category: "Digital Marketing",
+      date: "May 22, 2024",
+      title: "Mastering Digital Marketing in 2024",
+      description:
+        "Explore the latest trends in digital marketing and how businesses can stay ahead in the competitive market.",
+    },
   ];
 
   return (
-    <section className="container mx-auto px-4 sm:px-10  py-12">
-      {/* Header */}
-      <div className="flex justify-between items-center mb-8">
-        <h2 className="text-3xl font-bold">Our Popular Posts</h2>
-        <Link href="/Blog">
-          <Button className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-400">
-            View All
-          </Button>
-        </Link>
-      </div>
-
-      {/* Blog Grid */}
+    <section className="container mx-auto px-4 sm:px-10 py-12">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {blogs.map((blog) => (
           <div key={blog.id} className="border rounded-lg overflow-hidden">
@@ -111,4 +128,4 @@ const PopularPost = () => {
   );
 };
 
-export default PopularPost;
+export default Blogs;

@@ -12,7 +12,7 @@ const Email = () => {
           <input
             type="email"
             placeholder="Your email"
-            className="bg-white w-full sm:w-auto px-10 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-300"
+            className="bg-gray-400 w-full placeholder:text-white sm:w-auto px-10 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-300"
           />
           <Button className="w-full sm:w-auto px-10 py-6 bg-transparent border border-white text-white rounded-md hover:bg-white hover:text-purple-600 transition-colors duration-300">
             Get Started
