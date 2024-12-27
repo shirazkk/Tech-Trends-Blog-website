@@ -3,7 +3,11 @@ import client from "@/sanity/lib/client";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const singlePageQuery = `
     *[_type == "popularblogs" && slug.current == $slug][0] {
       tittle,
@@ -13,8 +17,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
       content
     }
   `;
-  const blog = await client.fetch(singlePageQuery, { slug: params.slug });
+  const blog = await client.fetch(singlePageQuery, {
+    slug: (await params).slug,
+  });
 
+  // Handle case where no blog is found
   if (!blog) {
     return (
       <div className="flex justify-center items-center min-h-screen text-2xl font-semibold text-gray-500 dark:text-gray-50">
