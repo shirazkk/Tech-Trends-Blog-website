@@ -8,7 +8,6 @@ import Image from "next/image";
 const navigationLinks = [
   { href: "/", label: "Home" },
   { href: "/About", label: "About" },
-  { href: "/Contactus", label: "Contact" },
   { href: "/Blog", label: "Blog" },
 ];
 
@@ -41,6 +40,7 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
+            
 
             <div>
               <Button

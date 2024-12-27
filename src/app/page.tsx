@@ -1,14 +1,15 @@
 import Hero from "@/components/hero";
 import PopularPost from "@/components/popular_post";
-import RecentBlogs from "@/components/recent_blogs";
+import RecentBlogs from "@/components/recentblog";
 
-export default function Home() {
+
+export default async function Home() {
+
   return (
     <>
-      <Hero />
+      <Hero/>
       <RecentBlogs/>
-      <PopularPost/>
-     
+      <PopularPost />
     </>
   );
 }

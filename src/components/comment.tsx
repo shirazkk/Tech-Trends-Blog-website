@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState} from "react";
 
 const Comment = () => {
   const [comment, setComment] = useState("");
@@ -12,7 +12,6 @@ const Comment = () => {
       setComment("");
     }
   };
-
   const handleDeletleComment = (index: number) => {
     const commnetDelete = comments.filter((_, i) => i !== index);
     setComments(commnetDelete);

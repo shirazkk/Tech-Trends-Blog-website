@@ -8,7 +8,6 @@ const Footer = () => {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
     { label: "Blog", href: "/blog" },
   ];
 
@@ -43,7 +42,7 @@ const Footer = () => {
               <li key={index}>
                 <Link
                   href={link.href}
-                   className="text-gray-600 hover:scale-110 hover:font-bold duration-300 hover:text-black hover:brightness-125 dark:text-gray-300 dark:hover:text-blue-400"
+                  className="text-black hover:scale-110 hover:font-bold duration-300 hover:text-purple-800"
                 >
                   {link.label}
                 </Link>

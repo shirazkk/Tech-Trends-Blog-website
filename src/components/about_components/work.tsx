@@ -22,7 +22,7 @@ const Work = () => {
 
   return (
     <div className="w-full py-16">
-      <div className="w-[80%] mx-auto">
+      <div className="w-[80%] mx-auto max-w-[1500px]">
         {/* Top Small Heading */}
         <p className="text-purple-600 font-medium mb-8">How We Work</p>
         
