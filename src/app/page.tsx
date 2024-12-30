@@ -10,6 +10,7 @@ export default async function Home() {
       <Hero/>
       <RecentBlogs/>
       <PopularPost />
+      
     </>
   );
 }

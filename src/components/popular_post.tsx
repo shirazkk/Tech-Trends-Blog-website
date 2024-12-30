@@ -31,7 +31,7 @@ const PopularPost = async () => {
       </div>
 
       {/* Blog Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {blogs.slice(7,10).map((blog: PopularBlog) => (
           <div key={blog.slug.current} className="border rounded-lg overflow-hidden">
             <Image

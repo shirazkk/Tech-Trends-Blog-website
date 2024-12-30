@@ -2,7 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['cdn.sanity.io'], // Add the hostname of your external image source
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io"
+      }
+    ]
   },
 };
 

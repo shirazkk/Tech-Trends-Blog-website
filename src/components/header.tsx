@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ModeToggle } from "./theme_button";
 import { AlignJustify } from "lucide-react";
 import Image from "next/image";
-
+import CustomClerkButtons from "@/components/custombuttons";
 const navigationLinks = [
   { href: "/", label: "Home" },
   { href: "/About", label: "About" },
@@ -40,21 +39,9 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            
 
             <div>
-              <Button
-                variant="outline"
-                className="mx-1 dark:text-white dark:border-white dark:hover:bg-white/10"
-              >
-                Login
-              </Button>
-              <Button
-                variant="outline"
-                className="mx-1 dark:text-white dark:border-white dark:hover:bg-white/10"
-              >
-                Signup
-              </Button>
+              <CustomClerkButtons />
             </div>
             <ModeToggle />
           </div>
@@ -62,7 +49,7 @@ const Header = () => {
           {/* Mobile Menu */}
           <div className="md:hidden flex justify-center items-center">
             <Sheet>
-              <SheetTrigger asChild>
+              <SheetTrigger>
                 <AlignJustify />
               </SheetTrigger>
               <span className="mx-4">
@@ -83,18 +70,7 @@ const Header = () => {
                     </Link>
                   ))}
                   <div className="flex flex-col gap-2 mt-4">
-                    <Button
-                      variant="outline"
-                      className="w-full dark:text-white dark:border-white dark:hover:bg-white/10"
-                    >
-                      Login
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="w-full dark:text-white dark:border-white dark:hover:bg-white/10"
-                    >
-                      Signup
-                    </Button>
+                    <CustomClerkButtons />
                   </div>
                 </div>
               </SheetContent>

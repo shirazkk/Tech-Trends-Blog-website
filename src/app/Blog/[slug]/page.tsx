@@ -17,6 +17,7 @@ export default async function Page({
       content
     }
   `;
+  
   const blog = await client.fetch(singlePageQuery, {
     slug: (await params).slug,
   });

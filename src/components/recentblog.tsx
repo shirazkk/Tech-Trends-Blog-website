@@ -30,12 +30,12 @@ const RecentBlogs = async () => {
       </div>
 
       {/* Featured Blog */}
-      {blogs.slice(0,1).map((blog: RecentBlog) => (
+      {blogs.slice(0, 1).map((blog: RecentBlog) => (
         <div
           key={blog.slug.current}
-          className="flex flex-col md:flex-row gap-8 mb-12"
+          className="flex flex-col lg:flex-row gap-8 mb-12"
         >
-          <div className="md:w-1/2">
+          <div className="lg:w-1/2">
             <Image
               src={blog.imageUrl}
               alt={blog.tittle}
@@ -45,7 +45,7 @@ const RecentBlogs = async () => {
               className="w-full h-[400px] object-cover rounded-md"
             />
           </div>
-          <div className="md:w-1/2">
+          <div className="lg:w-1/2">
             <div className="flex items-center gap-4 mb-3">
               <span className="text-sm font-semibold text-blue-600">
                 {blog.Category}
@@ -68,8 +68,8 @@ const RecentBlogs = async () => {
       ))}
 
       {/* Blog Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {blogs.slice(1,4).map((blog: RecentBlog) => (
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {blogs.slice(1, 4).map((blog: RecentBlog) => (
           <div
             key={blog.slug.current}
             className="border rounded-lg overflow-hidden"
