@@ -15,7 +15,7 @@ const Header = () => {
     <nav className="mx-auto bg-background/50 sticky top-0 shadow-lg w-full dark:border-b backdrop-blur z-50 dark:bg-black/50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          {/* Logo and Brand Name */}
+
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <Image
@@ -28,7 +28,6 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             {navigationLinks.map((link) => (
               <Link
