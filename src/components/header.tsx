@@ -3,7 +3,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ModeToggle } from "./theme_button";
 import { AlignJustify } from "lucide-react";
 import Image from "next/image";
-import CustomClerkButtons from "@/components/custombuttons";
+import { Button } from "./ui/button";
 const navigationLinks = [
   { href: "/", label: "Home" },
   { href: "/About", label: "About" },
@@ -15,7 +15,6 @@ const Header = () => {
     <nav className="mx-auto bg-background/50 sticky top-0 shadow-lg w-full dark:border-b backdrop-blur z-50 dark:bg-black/50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <Image
@@ -40,7 +39,18 @@ const Header = () => {
             ))}
 
             <div>
-              <CustomClerkButtons />
+              <Button
+                variant="outline"
+                className="mx-1 dark:text-white dark:border-white dark:hover:bg-white/10"
+              >
+                Login
+              </Button>
+              <Button
+                variant="outline"
+                className="mx-1 dark:text-white dark:border-white dark:hover:bg-white/10"
+              >
+                Signup
+              </Button>
             </div>
             <ModeToggle />
           </div>
@@ -69,7 +79,18 @@ const Header = () => {
                     </Link>
                   ))}
                   <div className="flex flex-col gap-2 mt-4">
-                    <CustomClerkButtons />
+                    <Button
+                      variant="outline"
+                      className="w-full dark:text-white dark:border-white dark:hover:bg-white/10"
+                    >
+                      Login
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="w-full dark:text-white dark:border-white dark:hover:bg-white/10"
+                    >
+                      Signup
+                    </Button>
                   </div>
                 </div>
               </SheetContent>
