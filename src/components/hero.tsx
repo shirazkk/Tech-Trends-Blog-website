@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { fetchHero } from "@/sanity/lib/sanity";
@@ -10,8 +9,9 @@ interface HeroData {
   portraitUrl: string;
 }
 
-const Hero = async() => {
-  const herodata:HeroData = await fetchHero();
+const Hero = async () => {
+  const herodata: HeroData = await fetchHero();
+
   return (
     <div className="container mx-auto px-4 sm:px-10 py-16 ">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
